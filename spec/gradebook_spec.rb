@@ -95,9 +95,9 @@ RSpec.describe GradeBook do
       @student4.log_score(91)
       @student4.log_score(1)
       @student4.log_score(2)
-      expect(@gradebook.students_in range(10-50)).to eq([@student1, @student4])
-      expect(@gradebook.students_below(60-89)).to eq([@student3])
-      expect(@gradebook.students_below(60-91)).to eq([@student2, @student3])
+      expect(@gradebook.students_in_range(10, 50)).to eq([@student1, @student4])
+      expect(@gradebook.students_in_range(60, 89)).to eq([@student3])
+      expect(@gradebook.students_in_range(60, 91)).to eq([@student2, @student3])
     end
   end
 end
